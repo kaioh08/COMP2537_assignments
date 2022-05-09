@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./favicon.png">
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/search.style.css">
+    <script defer src="/search.js"></script>
+    <title>Pokemon App</title>
+  </head>
+  <body>
+    <header>
+      <h1>Pokemon Gallery</h1>
+    </header>
+    <nav>
+      <a href="/"> Home </a>
+      <a href="/search"> Search </a>
+    </nav>
+    <main>
+      <div class="search-bar-wrapper">
+        <form id="search-form">
+          <div class="region-select input-wrapper">
+            <label for="region">Region</label>
+            <select name="region" id="region-selector">
+              <option value="Kanto">Kanto (1-151)</option>
+              <option value="Johto">Johto (152-251)</option>
+              <option value="Hoenn">Hoenn (252-386)</option>
+              <option value="Sinnoh">Sinnoh (387-494)</option>
+              <option value="Unova">Unova (495-649)</option>
+              <option value="Kalos">Kalos (650-721)</option>
+              <option value="Alola">Alola (722-809)</option>
+              <option value="Galar">Galar (810-898)</option>
+            </select>
+          </div>
+          <div class="type-select input-wrapper">
+            <label for="type">Type</label>
+            <select name="type" id="type-selector">
+              <option value="all-types">all types</option>
+              <option value="grass">grass</option>
+              <option value="bug">bug</option>
+              <option value="dark">dark</option>
+              <option value="dragon">dragon</option>
+              <option value="electric">electric</option>
+              <option value="fairy">fairy</option>
+              <option value="fighting">fighting</option>
+              <option value="fire">fire</option>
+              <option value="flying">flying</option>
+              <option value="ghost">ghost</option>
+              <option value="ground">ground</option>
+              <option value="ice">ice</option>
+              <option value="normal">normal</option>
+              <option value="poison">poison</option>
+              <option value="psychic">psychic</option>
+              <option value="rock">rock</option>
+              <option value="steel">steel</option>
+              <option value="water">water</option>
+            </select>
+          </div>
+          <div class="name-search input-wrapper">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name">
+          </div>
+          
+          <input id="search-form-btn" type="submit" value="Submit" />
+        </form>
+      </div>
+
+
+
+      <div id="gallery-wrapper" class="gallery-wrapper"></div>
+      <div id="page-btn-wrapper">
+        <button id="prev"> &lt; prev </button>
+        <button id="next"> next &gt; </button>
+      </div>
+    </main>
+
+    <footer>
+      <h5>Copyright © Pokemon Gallery 2022</h5>
+    </footer>
+
+  </body>
+</html>

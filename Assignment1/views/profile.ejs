@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/profile.style.css" />
+
+    <title>Pokemon App</title>
+  </head>
+  <body>
+    <header>
+      <h1>Pokemon Gallery</h1>
+    </header>
+    <nav>
+      <a href="/"> Home </a>
+      <a href="/search"> Search </a>
+    </nav>
+    <main>
+      <div class="big-pokemon-card">
+        <h1 class="bpc-header"><%= pokemon.name %></h1>
+
+        <div class="bpc-content">
+          <div class="bpc-left">
+            <div class="img-container">
+              <img src="<%= pokemon.imageUrl %>" />
+            </div>
+          </div>
+
+          <div class="bpc-right">
+            <div class="abilities">
+              <h3>Abilities</h3>
+              <ul>
+                <% pokemon.abilities.forEach(ability => { %>
+                <li><%= ability %></li>
+                <% }) %>
+              </ul>
+            </div>
+            <div class="stats">
+              <h3>Statistics</h3>
+              <ul>
+                <% pokemon.statistics.forEach(stat => { %>
+                <li class="stat-item">
+                  <div class="item-wrapper">
+                    <label for="<%= stat.attribute %>"
+                      ><%= stat.attribute %>
+                    </label>
+                    <progress
+                      id="<%= stat.attribute %>"
+                      value="<%= stat.val %>"
+                    >
+                      <%= stat.val %>
+                    </progress>
+                  </div>
+                </li>
+                <% }) %>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <h5>Copyright © Kai Oh 2022</h5>
+    </footer>
+  </body>
+</html>
